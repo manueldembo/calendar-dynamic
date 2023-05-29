@@ -6,3 +6,89 @@
     box-sizing: 'border-box';
     font-family: 'Poppins', sans-serif;
 }
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #9b59b6;
+}
+.wrapper {
+    width: 450px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.wrapper header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px 10px;
+}
+header .current-date {
+    font-weight: 500;
+    font-size: 1.45rem;
+}
+header .icons span {
+    height: 38px;
+    width: 38px;
+    line-height: 38px;
+    margin: 0 1px; 
+    color: #878787;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.9rem;
+}
+header .icons span:hover {
+    background-color: #f2f2f2;
+}
+header .icons span:last-child {
+    margin-right: -10px;
+}
+.calendar {
+    padding: 20px;
+}
+.calendar .weeks li {
+    font-weight: 500;
+}
+.calendar .days {
+    margin-bottom: 20px;
+}
+.calendar ul  {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+.calendar ul li {
+    position: relative;
+    width: calc(100% / 7);
+}
+.calendar .days li{
+    cursor: pointer ;
+    margin-top : 30px;
+    z-index: 1;
+}
+.days li.active {
+    color: #fff;
+}
+.days li .inactive {
+    color: #aaa;
+}
+.calendar .days li::before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+}
+.days li:hover::before {
+    background-color: #f2f2f2;
+}
+.days li.active::before {
+    background-color: #9b59b6;
+}
