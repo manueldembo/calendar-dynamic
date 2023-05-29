@@ -72,7 +72,7 @@ header .icons span:last-child {
 .days li.active {
     color: #fff;
 }
-.days li .inactive {
+.days li.inactive {
     color: #aaa;
 }
 .calendar .days li::before {
